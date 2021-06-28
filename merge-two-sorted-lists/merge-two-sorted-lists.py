@@ -7,15 +7,15 @@ class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
         iter1 = l1
         iter2 = l2
-        iter3 = sorted_l = ListNode()
+        iter3 = l_list = ListNode() 
         
         while iter1 is not None and iter2 is not None:
             if iter1.val <= iter2.val:
                 iter3.next = iter1
-                iter1 = iter1.next
+                iter1 = iter1.next         
                 
             elif iter1.val > iter2.val:
-                iter3.next = iter2
+                iter3.next = iter2 
                 iter2 = iter2.next
             iter3 = iter3.next
                 
@@ -24,7 +24,7 @@ class Solution:
         elif iter2 is not None:
             iter3.next = iter2
             
-        return sorted_l.next
+        return l_list.next
             
         
         
