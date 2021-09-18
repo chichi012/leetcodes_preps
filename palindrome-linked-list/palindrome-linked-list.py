@@ -85,7 +85,7 @@ class Solution:
     
 #     def isPalindrome(self, head: ListNode) -> bool:
 #         new_node = ListNode()
-#         iter1 = iter2 = head 
+#         iter1 = iter3 = head 
 #         prev = None
 #         temp = None
       
@@ -94,12 +94,13 @@ class Solution:
 #             iter1.next = prev
 #             prev = iter1
 #             iter1 = temp
-#         return prev
-        
-#         while prev !=None and iter2 != None:
-#             if prev == iter2:
+#         return print(head)
+       
+ 
+        # while prev !=None and iter2 != None:
+#             if prev.val == iter2.val:
 #                 return True
-#             elif prev != iter2 and counter ==2:
+#             elif prev.val != iter2.val:
 #                 return False
 #             iter2 = iter2.next 
 #             prev = prev.next
