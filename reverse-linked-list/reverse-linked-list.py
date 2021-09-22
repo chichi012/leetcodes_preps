@@ -6,7 +6,8 @@
 class Solution:
     
     def reverseList(self, head: ListNode) -> ListNode:
-     
+     #iterative
+    
         # iter1 = head
 #         prev = None
 #         temp = None
@@ -19,15 +20,16 @@ class Solution:
 #         return prev
 
         return self.reverseListHelper(head)
-        
+       
+    #recursive
         
     def reverseListHelper(self,iter1,prev=None):
-        if not iter1:
+        if iter1 is None:
             return prev
         temp = iter1.next
         iter1.next = prev
         prev = iter1
-        return self.reverseListHelper(temp,iter1)
+        return self.reverseListHelper(temp,prev)
 
         
         
