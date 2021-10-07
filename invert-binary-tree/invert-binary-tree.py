@@ -6,14 +6,66 @@
 #         self.right = right
 class Solution:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
-        if root is None:
-            return 
-        self.swapNodes(root)
+        if not root:
+            return
+        self.invertTreeHelper(root)
         self.invertTree(root.left)
         self.invertTree(root.right)
+        
         return root
+    
+    def invertTreeHelper(self,node):
+        node.left,node.right = node.right,node.left
         
-    def swapNodes(self,node):
-        node.left,node.right = node.right,  node.left
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        """METHOD 2 USING A STACK"""
+#         stack = [root]
+#         while stack:
+#             node = stack.pop()
+#             if node:
+#                 node.left, node.right = node.right, node.left
+#                 stack.append(node.left)
+#                 stack.append(node.right)
+#         return root    
+        
+        
+        
+        """METHOD 1"""
+#         if root is None:
+#             return 
+#         self.swapNodes(root)
+#         self.invertTree(root.left)
+#         self.invertTree(root.right)
+#         return root
+        
+#     def swapNodes(self,node):
+#         node.left,node.right = node.right,  node.left
         
