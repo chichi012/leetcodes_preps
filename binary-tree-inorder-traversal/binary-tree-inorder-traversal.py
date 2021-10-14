@@ -6,49 +6,55 @@
 #         self.right = right
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-        arr = []
-        self.inorderTraversalHelper(root,arr)
-        return arr
         
-    def inorderTraversalHelper(self,node,arr):
-        if node is None: #empty tree
-            return
-        else:
-            if node.left is not None:
-                self.inorderTraversalHelper(node.left,arr)
-            arr.append(node.val)
-            if node.right is not None:
-                self.inorderTraversalHelper(node.right,arr)
+        """one line solution"""
+        return self.inorderTraversal(root.left) + [root.val] + self.inorderTraversal(root.right) if root else []
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        """RECURSIVE SOLUTION"""
+#         arr = []
+#         self.inorderTraversalHelper(root,arr)
+#         return arr
+        
+#     def inorderTraversalHelper(self,node,arr):
+#         if node is None: #empty tree
+#             return
+#         else:
+#             if node.left is not None:
+#                 self.inorderTraversalHelper(node.left,arr)
+#             arr.append(node.val)
+#             if node.right is not None:
+#                 self.inorderTraversalHelper(node.right,arr)
             
         
-        
-        
-        
-        
-        
-        
-        
-        
+        """USING A STACK"""
         
 #         if root is None: #empty tree
 #             return None
 #         elif root.left is None and root.right is None: #single node tree
 #             return [root.val]
 #         else:
-#             queue = [root]
-#             arr = []
-#             i = 0
-#             while i < len(queue):
-#                 popped = queue[i]
-#                 arr.append(root.val)
-#                 i+=1
-#                 if popped.left:
-#                     queue.append(popped.left)
-#                 if popped.right:
-#                     queue.append(popped.right.left)
-#                     queue.append(popped.right)
-                    
-#         return arr
+#             stack = []
+#             res = []
+#             curr = root
+#             while curr is not None or len(stack) >0:
+#                 while curr is not None:
+#                     stack.append(curr)
+#                     curr = curr.left
                 
+#                 curr = stack.pop()
+#                 res.append(curr.val)
+#                 curr = curr.right
+                
+#             return res
             
-            
+ 
