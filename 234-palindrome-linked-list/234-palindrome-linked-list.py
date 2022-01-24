@@ -41,9 +41,5 @@ class Solution:
         return True
             
             
-            
-            
-            
-#         solution 2
-#         use stack
-#         pop from stack while iterating llist if same else not a palindrome
+    
+
