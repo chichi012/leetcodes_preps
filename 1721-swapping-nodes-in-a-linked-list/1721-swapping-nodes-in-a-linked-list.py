@@ -25,6 +25,7 @@ class Solution:
         #slow pointer is pointing at kth node from end and 
         #iter1 is at kth node from start
         
+        #doing the swapping of node values
         iter1.val,slow.val = slow.val,iter1.val
         
         return head
