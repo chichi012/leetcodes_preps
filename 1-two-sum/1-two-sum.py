@@ -1,5 +1,7 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
+        
+        #O(N) time and space cmplexity
         d = dict()
         i = 0
         for item in nums:
