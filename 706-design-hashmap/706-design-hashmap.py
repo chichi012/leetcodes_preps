@@ -1,3 +1,24 @@
+# https://leetcode.com/problems/design-hashmap/discuss/1097755/JS-Python-Java-C%2B%2B-or-(Updated)-Hash-and-Array-Solutions-w-Explanation
+
+
+
+
+# SOLUTION 1 WITH ARRAYS
+
+# class MyHashMap:
+#     def __init__(self):
+#         self.data = [None] * 1000001
+#     def put(self, key: int, val: int) -> None:
+#         self.data[key] = val #simply overwrites the value at the key index 
+#     def get(self, key: int) -> int:
+#         val = self.data[key]   #returns the value at the key index. KEY index is guranteed to exist in the array since 0 <= key, value <= 10^6
+#         return val if val != None else -1
+#     def remove(self, key: int) -> None:
+#         self.data[key] = None  #assign key index position back to None
+
+
+
+# SOLUTION 2
 class Node:
     def __init__(self,key,value):
         self.pair = (key,value)
@@ -9,10 +30,12 @@ class MyHashMap:
         """
         Initialize your data structure here.
         """
-        self.capacity = 10000
+        self.capacity = 10000  #since At most 10^4 calls will be made to put, get, and remove. Make it same to reduce the chances of collisions
         self.arr = [None]*self.capacity
+        """
+        The size of our hashmap array should probably be at least equal to the number of entries. Increasing the size of the hashmap array will naturally reduce collisions (and therefore time complexity) at the expense of space complexity, and vice versa. The tradeoff is highly dependent on the quality of the hashing function.
 
-
+        """
     def put(self, key: int, value: int) -> None:
         """
         value will always be non-negative. 0 <= key
