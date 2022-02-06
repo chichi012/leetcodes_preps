@@ -1,6 +1,6 @@
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
-#      Approach
+#      Approach: https://www.youtube.com/watch?v=uDB5QXTqMn0
 #      1. Loop through grid[row][col] for "1"s. Call a depth first search on it 
 #      2. Mark grid[row][col] as seen then check its neighbours, Call a depth first search on "1"s encountered
 #      3. After dfs call, increment num_islands count and return 
