@@ -1,14 +1,14 @@
-# class Solution:
-#     def shortestCompletingWord(self, licensePlate: str, words: List[str]) -> str:
-#         dictt = dict()
-#         for letter in licensePlate:
-#             if letter.isalpha():
-#                 if letter.lower() not in dictt:
-#                     dictt[letter.lower()] = 1
-#                 else:
-#                     dictt[letter.lower()] += 1
-#         # print(dictt)
-#         for word in words:
+class Solution:
+    def shortestCompletingWord(self, licensePlate: str, words: List[str]) -> str:
+        dictt = dict()
+        for letter in licensePlate:
+            if letter.isalpha():
+                if letter.lower() not in dictt:
+                    dictt[letter.lower()] = 1
+                else:
+                    dictt[letter.lower()] += 1
+        # print(dictt)
+        # for word in words:
             
 class Solution:
     def shortestCompletingWord(self, licensePlate: str, words: List[str]) -> str:
