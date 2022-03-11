@@ -21,6 +21,8 @@ class Solution:
                 right -=1
             elif sums == target:
                 return [left+1,right+1]
+            
+        return []
         
 
         
