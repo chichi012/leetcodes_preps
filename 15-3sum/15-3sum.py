@@ -1,6 +1,8 @@
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         #total time complexity: O(NlogN) + O(N^2) = O(N^2)   (keep dominant term)
+        #space complexity: depends on sorting implementation. Could be O(1) or O(N)
+        
         if not nums or (len(nums) == 1 and nums[0] == 0):
             return []
         arr = []
@@ -8,7 +10,7 @@ class Solution:
         
         #use each number in the input array as a possible first value
         for i,a in enumerate(nums):  
-            #check that next number isnt the same as previous and i ist the first number in the array
+            #check that next number isnt the same as previous and i isnt the first number in the array. If a==nums[i-1],  skip this loop
             if i > 0 and a==nums[i-1]:
                 continue
             left = i+1
