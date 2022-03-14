@@ -1,5 +1,9 @@
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
+        
+        #tabulation Dynamic Programming with Bottom-Up approach
+        # time complexity: O(nxm) where n and m are the length of the two strings
+        #space complexity: 2D matrix of length nxm
         grid = [[0 for j in range(len(text1)+1)] for i in range(len(text2)+1)]
         print(grid)
         for i in range(len(text2)-1,-1,-1):
