@@ -11,6 +11,11 @@ class Solution:
         """
         Using Depth First Search Algorithm
         
+        Complexity Analysis
+
+Time Complexity: O(N), where N is the number of nodes in the binary tree. In the worst case we might be visiting all the nodes of the binary tree.
+
+Space Complexity: O(N). This is because the maximum amount of space utilized by the recursion stack would be N since the height of a skewed binary tree could be N.
         """
         self.result = None
     
@@ -18,15 +23,8 @@ class Solution:
             if not node:
                 return False
 
-            # if node.val == p.val or node.val == q.val:
-            #     return result
-            # result = node
-            # node = node.left
             left = lowestCommonAncestorHelper(node.left)
 
-#             if node.right:
-#                 result = node
-#                 node = node.right
             right = lowestCommonAncestorHelper(node.right)
     
             mid = node == p or node == q
