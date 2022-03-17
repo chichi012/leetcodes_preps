@@ -2,6 +2,9 @@ class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         """
         USING TWO POINTERS
+        time complexity: O(N) since we need to traverse the nums list once to check all its elements
+        Space complexity: O(1)
+        
         Strategy: [0,0,1,2,2,3,3,4,5,6,6]
         
         - first element will always come first so start two pointers at second element index arr[1]
