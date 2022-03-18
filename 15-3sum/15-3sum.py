@@ -13,6 +13,8 @@ class Solution:
             #check that next number isnt the same as previous and i isnt the first number in the array. If a==nums[i-1],  skip this loop
             if i > 0 and a==nums[i-1]:
                 continue
+                
+            #TwoSum Algorithm (base case)
             left = i+1
             right = len(nums)-1
             while left<right:                         #O(N*N) Time complexity
@@ -26,7 +28,9 @@ class Solution:
                     arr.append(ls)
                     #move the left pointer or right pointer only since the other conditions will take care of the other pointer
                     left +=1
-                    #skip next number if the same again
+                    #skip next number if the same again since we used it to start a sequence
+                    #Notice that the solution set must not contain duplicate triplets.
+
                     while left < right and nums[left] == nums[left-1]:
                         left +=1
 
